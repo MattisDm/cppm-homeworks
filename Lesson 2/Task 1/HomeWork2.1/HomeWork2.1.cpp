@@ -18,7 +18,7 @@ enum Months {
     December
 };
 
-std::string displayMonth2String(Months &month) {
+std::string displayMonth2String(Months& month) {
     switch (month) {
     case Stop:
         return "До свидания";
@@ -50,7 +50,7 @@ std::string displayMonth2String(Months &month) {
         break;
     }
     return "Не правильный номер!";
-}
+};
 
 int main(int argc, char** argv)
 {
@@ -60,7 +60,7 @@ int main(int argc, char** argv)
         int monthInt;
         std::cout << "Введите номер месяца: ";
         std::cin >> monthInt;
-        Months month = static_cast<Months>(monthInt);
+        month = static_cast<Months>(monthInt);
         std::cout << displayMonth2String(month) << std::endl;
     }
     return 0;
